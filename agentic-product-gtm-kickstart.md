@@ -4,22 +4,21 @@
 
 © 2026 Hernan Alvarez. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). Using it to run your own company's work is fine; see the [README](README.md).
 
-**Version 1.29 - 2026-11-02**
+**Version 1.30 - 2026-11-03**
 
-In July this was a side project. An hour or two a week, helping a company think through its strategy.
+In July this was a side project, an hour or two a week helping a company think through its strategy.
 
-We started with a strategy doc and argued with it line by line until it held up. Then a 60-second pitch, and a pressure test written to break it. The founder and I did all of it together. When we dug into the product, it wasn't ready to back the pitch. So we shelved the pitch and set a date for an MVP that people could use and that could prove there was a market.
+We started with a strategy doc and argued with it line by line until it held up. Then we wrote a 60-second pitch, and a pressure test to try to break it. The founder and I did all of it together. When we dug into the product, it wasn't ready to back the pitch. So we shelved the pitch and set a date for an MVP that people could use and that could prove there was a market.
 
 I went full-time in September, and the MVP launched October 1. We put it in front of a few design partners we knew well, and their feedback shaped the product through October. Meanwhile the go-to-market side got ready for a real outbound push. Today it's a small team plus a set of agents, and we're well on the way to this year's goal of 50 active, qualified design partners.
 
-Here's who does what. Chat agents write strategy, positioning, and copy. Coding agents build the site and the product. A software factory ships it. CRM agents generate and score leads, run outreach, book meetings, prep the team before each one, and manage content.
+Chat agents write strategy, positioning, and copy. Coding agents build the site and the product. A software factory ships it. CRM agents generate and score leads, run outreach, book meetings, prep the team before each one, and manage content.
 
-One change made all of it easier. We moved off Word docs and Google Drive onto shared Markdown docs that every agent can read and write. People and agents both read Markdown fine, so a handoff is one sentence: read this doc.
+The change that made all of it easier was moving off Word docs and Google Drive onto shared Markdown docs that every agent can read and write. People and agents both read Markdown fine, so a handoff is one sentence: read this doc.
 
-This isn't the only way to do it, and maybe not the best. It's what worked for us: an existing team with its own habits, technology that was promising but not yet a product, and an eager, supportive founder.
+It's what worked for us: an existing team with its own habits, technology that was promising but not yet a product, and an eager, supportive founder.
 
 This playbook is that process with our company taken out. Read Part 1 first. To start, all you need is a chat agent connected to a shared wiki. Then give your agent the whole playbook and say "Read all of this, then start at Phase 0." It drafts each document from what you already have, asks you about the gaps, and argues with you until it's right.
-
 
 ---
 
@@ -27,11 +26,12 @@ This playbook is that process with our company taken out. Read Part 1 first. To 
 
 ## Who this is for
 
-Anyone starting product and go-to-market work who wants agents to do a real part of it. A founder before the first raise. A product leader taking over a new product line. A GTM leader getting ready for a launch. The process is the same for all of them. What changes is what you start with and who reads the result.
+Anyone starting product and go-to-market work who wants agents to do a real part of it. That could be a founder before the first raise, a product leader taking over a new product line, or a GTM leader getting ready for a launch. The process is the same for all of them. What changes is what you start with and who reads the result.
 
 In this playbook, **you** (the person running it) are **the lead**. Your AI assistant is **the agent**.
 
 Terms you'll see:
+
 * **GTM:** go-to-market. Everything it takes to find, win, and keep customers.
 * **MCP:** the connection that lets an agent read and write another tool, like the wiki or the tracker.
 * **ICP** (ideal customer profile)**:** the criteria you can check to decide whether an account is a fit.
@@ -59,7 +59,7 @@ A set of working documents. Each one has a version and knows which other docs it
 
 The base layer sits on top. Everything else builds from it.
 
-```mermaidjs
+```mermaid
 flowchart TB
   B[Base layer: positioning fundamentals<br/>wins every conflict] --> S[Strategy]
   B --> C[Messaging and copy]
@@ -84,30 +84,31 @@ flowchart TB
 | Chat agent with projects | Strategy, positioning, copy, and research. Keeps your standing instructions | Claude (chat and Projects) |
 | Coding agent | Builds the site, the docs, and anything that ships. Can update docs and tickets on its own | Claude Code, Codex |
 | Design agent | Mocks up pages and screens with the lead, at desktop and phone width, starting from the live site. Its decisions go to the coding agent as a brief | Claude Design |
-| Shared wiki of Markdown docs, connected to every agent over MCP | **The hub.** Agents and people both read Markdown, so one doc works for both. Every working doc lives here, and it's how agents and people pass work to each other. One agent writes a brief, a copy round, or a result, and the next one reads it by name. Versions go in doc titles. Status goes on the ticket, which links to the doc | Outline |
-| Tracker | Where every step's status lives. The plan links to tickets, and tickets link to briefs | Linear |
-| Repo | Code, site copy, and the rule files agents read (`AGENTS.md`) | GitHub |
-| Team chat | Pings between people, review and merge calls, links to docs | Slack |
+| Shared wiki of Markdown docs, connected to every agent over MCP | **The hub.** Agents and people both read Markdown, so one doc works for both. Every working doc lives here, and it's how agents and people pass work to each other. One agent writes a brief, a copy round, or a result, and the next one reads it by name. Versions go in doc titles. Status goes on the ticket, which links to the doc | Outline      |
+| Tracker | Where every step's status lives. The plan links to tickets, and tickets link to briefs | Linear       |
+| Repo | Code, site copy, and the rule files agents read (`AGENTS.md`) | GitHub       |
+| Team chat | Pings between people, review and merge calls, links to docs | Slack        |
 | Software factory | Reviews, merges, and ships whatever lands in the repo. Takes direction in team chat | An internal fleet of coding agents (yours may be CI, a review bot, or a person) |
-| CRM with agents | Generates leads and scores them against the ICP, runs outreach, books meetings, preps the team before each one, and manages content | Clarify |
+| CRM with agents | Generates leads and scores them against the ICP, runs outreach, books meetings, preps the team before each one, and manages content | Clarify      |
 | Warm-intro graph | Builds outreach lists from real relationships | Connect the Dots |
-| Session recorder | A record of every agent session, including the software factory's. Use it to pick up where a session stopped, or to pull real numbers into content. Connected to the repo | HypAware |
-| Product analytics | Website traffic, how people find you, and whether they start using the product. Fed by the website and the product | PostHog |
+| Session recorder | A record of every agent session, including the software factory's. Use it to pick up where a session stopped, or to pull real numbers into content. Connected to the repo | HypAware     |
+| Product analytics | Website traffic, how people find you, and whether they start using the product. Fed by the website and the product | PostHog      |
 | Search | How the website shows up in search, and what people searched to find it | Google Search Console |
-| Paid search | Ads that bring traffic to the website | Google Ads |
+| Paid search | Ads that bring traffic to the website | Google Ads   |
 
 **Minimum to start:** a chat agent connected to a shared wiki. That gets you through Phases 0 to 5, which only produce documents. Add the rest when a phase needs it:
+
 * **Phase 6 (copy, design, launch):** coding agent, repo, design agent, team chat, product analytics, search.
 * **Phase 8 (growth plan and execution):** tracker, CRM with agents, warm-intro graph, paid search.
 * **Optional, any time:** session recorder, software factory.
 
-**The one setup choice that matters most:** connect every agent to the same wiki before Phase 5. If you're downloading a file from one agent and uploading it to another, you're the bottleneck. And the copies drift apart.
+**Connect every agent to the same wiki before Phase 5.** It's the setup choice that matters most. If you're downloading a file from one agent and uploading it to another, you're the bottleneck, and the copies drift apart.
 
 ## How the tools fit together
 
 This is our stack, shown as an example. The table above says what role each tool plays, so swap in your own. Read it left to right. The lead (blue) works with the agents. The agents work through the shared tools in the middle. Two lanes produce the outputs (green), and those feed analytics.
 
-```mermaidjs
+```mermaid
 flowchart LR
   L((Lead))
 
@@ -224,7 +225,7 @@ flowchart LR
 * Nothing gets made up. Unknowns go on the open questions list or get marked `[NEED SPECIFIC]`.
 * You approve changes before they're made.
 * Plan on a few working sessions per phase.
-* Work through it with your closest collaborator: a founder, cofounder, or exec sponsor. Not as an approver. Share drafts in the wiki as they change, and argue through the pressure test together. You get aligned by doing the work side by side.
+* Work through it with your closest collaborator: a founder, cofounder, or exec sponsor. Share drafts in the wiki as they change, and argue through the pressure test together. You get aligned by doing the work side by side.
 
 ---
 
@@ -248,7 +249,7 @@ Then follow these rules in every phase:
 
 ## Order of operations
 
-```mermaidjs
+```mermaid
 flowchart TD
   P0[0. Operating instructions] --> P1[1. Strategy doc]
   P1 <--> P2[2. Competitive analysis]
@@ -277,6 +278,7 @@ flowchart TD
 **Draft.** Fill template T0 from what you can infer from their writing samples. T0's writing rules are examples from one lead: confirm or replace each one. Keep the rules on facts.
 
 **Ask the lead.**
+
 * Who are you, what are you working on, and what are you *not* doing (so I stop suggesting it)?
 * How do you want answers formatted? Length, bullets, where decisions go.
 * Words or habits you never want to see.
@@ -286,6 +288,7 @@ flowchart TD
 **Challenge.** Is any rule vague enough that two agents would apply it differently? Rewrite it as something checkable ("no em dashes" beats "write cleanly").
 
 **Done when.**
+
 * T0 is saved where every agent the lead uses can read it: chat preferences, a project doc, and later the repo's `AGENTS.md`.
 * There is a place to record new rules as they come up (T13).
 
@@ -300,7 +303,8 @@ flowchart TD
 **Inputs.** Whatever exists: a one-pager, a deck, notes, a product description, customer conversations. Read each one first and list what's missing or contradictory. That list becomes your first open questions.
 
 **Draft.**
-1. **Start with a challenge, not a document.** Before you draft anything, poke holes in what the lead has. Ask:
+
+1. **Start with a challenge.** Before you draft anything, poke holes in what the lead has. Ask:
    * What do we do that the nearest incumbent doesn't? Say it in one sentence.
    * Has anyone used that incumbent hands-on?
    * Is there a real customer or design partner, or is this a thesis?
@@ -308,6 +312,7 @@ flowchart TD
 2. Then talking points, then the doc (T1). On a first version, Sections 7, 9 and 10 may be thin, and Section 11 holds only the yardstick questions until Phase 2 fills it. Keep each heading, write what you have, and put the gap in Section 13.
 
 Keep these in mind:
+
 * **Wedge versus moat.** The wedge is what gets you in and has a shelf life. The moat is what's left when the wedge gets copied.
 * **Structurally can't do.** For each competitor class, what their business model or architecture prevents, not just what they haven't built yet. Treat it as a hypothesis: name the mechanism and what would disprove it.
 * **Name the assumption.** If the plan depends on something unproven (for example, "the free product generates the leads"), write it as a named risk with alternatives.
@@ -317,15 +322,17 @@ Keep these in mind:
 **Ask the lead.** Fill the gaps the draft exposed. One topic at a time. Every target and metric is the lead's call. Propose one, labeled "Proposed," or write "TBD: [who] sets it after [event]."
 
 **Challenge.**
+
 * Get a **cold review**: a fresh session, ideally a different model, reads the doc and reports problems without fixing them (T11). Sort what comes back into fix now, decide then fix, and polish. The lead decides each group.
 * Check the phases against the wedge's shelf life. If the plan takes longer than the wedge will last, shorten it and give each phase a clear finish line.
 * Check every claim's tense. Present tense only for what exists.
 
 **Done when.**
+
 * Every section has content or an explicit open question.
 * No invented numbers.
 * The cold review is triaged.
-* The doc is written for a neutral reader, not addressed to anyone.
+* The doc is written for a neutral reader.
 * It has a version and a version history.
 * Anything being tested is labeled strawman, with what you expect to learn and where each figure may appear.
 
@@ -338,6 +345,7 @@ Keep these in mind:
 **Inputs.** The strategy doc's competitor section and its matrix questions, the base layer once it exists (it wins on any conflict), plus research.
 
 **Draft.**
+
 * **Sweep by category first:** platform vendors, incumbents in adjacent categories, newer startups, open-source tools, aggregators, and the platforms you'd partner with rather than fight.
 * **Then chain:** each competitor's own comparison pages point you to the next. Agree a stopping point with the lead (a source budget, or when new names stop turning up), and list what's left as a research backlog.
 * **Set the yardstick first:** the two to four questions from the strategy matrix that separate you from everyone else. Name the table stakes too, so nobody compares on those. Every write-up and the matrix answer the same questions.
@@ -354,6 +362,7 @@ Keep these in mind:
 **Challenge.** Is any differentiation claim something a funded competitor ships next quarter? Move it to "doesn't hold on its own." Is any verdict based only on marketing copy? Say so in the entry, and note that someone still needs to try it hands-on.
 
 **Done when.**
+
 * Every competitor in the strategy matrix has a write-up.
 * Entries that aren't competitors sit in their own category, with why buyers raise them and which doc owns the later decision.
 * If an agent works on prospects, its brief exists, cites this doc's current version, and has a row for every competitor in the matrix.
@@ -370,16 +379,18 @@ Keep these in mind:
 **Inputs.** The strategy doc, any raw pain material (whiteboard notes, customer quotes), the persona.
 
 **Draft.**
+
 * Two variants that differ only in the pain beat, so you can test them (T3). Write Variant A in full; Variant B is the one paragraph that changes.
 * Leave out how it works. That's its own answer.
 
 **Work on beats, not prose.** Break the script into its key points (beats), get those right, and put the script line that carries each one under it.
 
-**Ask the lead.** Which pain do you hear most? Who will say this out loud? It has to work for anyone on the team, not just one person.
+**Ask the lead.** Which pain do you hear most? Who will say this out loud? It has to work for anyone on the team.
 
 **Challenge.**
+
 * Cut internal labels and consulting vocabulary.
-* Write it for what the product has to be, not only what it does today. Flag every line that isn't true yet. Phase 4 tests those lines, and nothing flagged goes out in public until it's true.
+* Write it for what the product has to be. Flag every line that isn't true yet. Phase 4 tests those lines, and nothing flagged goes out in public until it's true.
 * Time it out loud. Word counts underestimate.
 * Write delivery notes: which beat carries the pitch, how the risky beats have to sound, which line is the only one that creates urgency, and the failure mode at the close.
 * For everything left out, say why and where it goes instead (the how-it-works answer, the follow-up), or what brings it back.
@@ -391,14 +402,16 @@ Keep these in mind:
 **Inputs.** The locked pitch, the strategy doc.
 
 **Draft** (T4):
-* **Start in chat, not a doc.** Ask for the three statements first and argue with them. Write the doc once the chat version holds.
-* The three statements: pain (in the buyer's words), solution (not architecture), value (in the order a buyer values it).
+
+* **Start in chat.** Ask for the three statements first and argue with them. Write the doc once the chat version holds.
+* The three statements: pain (in the buyer's words), solution (no architecture), value (in the order a buyer values it).
 * Differentiation ranked by how long it survives a funded competitor. Each one opens with a one-sentence claim, names the competitors, and gives durability with its reasoning. Close with an honest ranking: which difference matters, which ones close deals, which are only enablers.
 * Why someone chooses you, segmented by why they showed up: who they are, why you win and against whom, deal speed, and whether the plan can count on the segment existing in volume. Include where you lose.
 * What doesn't hold up yet, worst first. Each problem opens with a one-sentence claim. Label every number as verified or an assumption, and show the math. End each with what would resolve it and what the plan should assume until then.
 * The next 90 days, each action tied to a numbered problem.
 
 **Risk checklist to run:**
+
 * Recognition isn't urgency.
 * Your value claim caps your price.
 * Proving it worked needs a before and after you can measure.
@@ -407,7 +420,7 @@ Keep these in mind:
 * A differentiator nobody is asking for yet.
 * A data or privacy question that will surface in procurement.
 
-**The point isn't being right.** It's writing down, in advance, what evidence would settle each claim. An item without that line isn't done.
+**Write down, in advance, what evidence would settle each claim.** An item without that line isn't done.
 
 **Keep it alive after it's written:**
 
@@ -419,6 +432,7 @@ Keep these in mind:
 **Challenge.** Did the pressure test overturn anything you told the lead earlier? Say so.
 
 **Done when.**
+
 * Each problem has a "what would resolve it" and an "until then."
 * Recommendations that affect other docs are listed so they can be carried over.
 * Later docs cite risks by number when evidence arrives.
@@ -433,19 +447,22 @@ Keep these in mind:
 **Draft.** Compare the pitch and the pressure test against what the product actually does today. Start with the lines flagged as not true yet in 3a. Have the lead dig into the product directly: use it, look at real usage, talk to whoever builds it.
 
 **Ask the lead.**
+
 * Does it directly solve the pain in the pitch today?
 * What core capability is missing?
 * Could a prospect get on it this month and see value?
 
 **If the product can't back the message:**
+
 * Park the messaging on purpose. Keep the drafts, and record why they're parked and what brings them back.
 * Write a **dated MVP outline** (T5) around three tests: can we talk to people about it, can they get on it, can we prove it worked for them. Define the happy path: the setups where the product works today. Those become the filter for who you reach out to.
 * From here on, every doc separates **shipped** from **planned**.
-* The MVP includes the storefront, not just the product: a live site, self-service sign-up that works end to end, legal pages (privacy policy, terms), and core content like solution guides. On launch day you should look open for business, even if the big go-to-market push comes later.
+* The MVP includes the storefront: a live site, self-service sign-up that works end to end, legal pages (privacy policy, terms), and core content like solution guides. On launch day you should look open for business, even if the big go-to-market push comes later.
 * Open for business includes the look: every launch page in one visual system, readable at phone width. Run the first design pass (6b) once the pages have copy.
 * The MVP outline lets you move on to Phases 5 and 6 while the product is built. It doesn't clear any line flagged as not true yet. Before launch, run this check again against the product as built and the T5 checklist, and record the evidence and the lead's go or no-go.
 
 **Done when.**
+
 * Either the product backs the pitch, or there's a dated MVP outline with what ships under what name, product areas with status, focus areas, the launch checklist, how you'll know it worked, and asks for the team.
 
 ---
@@ -457,6 +474,7 @@ Keep these in mind:
 **Inputs.** Everything so far: strategy doc, competitive analysis, pitch, pressure test, MVP outline, customer feedback, usage data. Put them all in one shared place on one day.
 
 **Draft.**
+
 1. **Conflict pass.** Read every input against the launch plan. List every place they disagree. Propose a resolution for each that says what's true at launch, what's true long term, and what copy can and can't claim as a result. Title each one with its resolution.
 2. Write the base layer (T6), with the precedence line and the named, dated sources in "How to read." Version 1 comes from the first session. The site and copy sections fill in as copy rounds land.
 3. Date every decision where it lives ("approved [date]", "retired [date]"). Point to other sections by number instead of repeating a fact.
@@ -465,6 +483,7 @@ Keep these in mind:
 **Ask the lead.** Decide each conflict. One at a time, recommendation first.
 
 **Sections that do the most work:**
+
 * **Shipped versus planned:** capability, status, and notes (ticket, who confirmed, date, what must be true before it's claimed). "Do not claim" is a status. Confirm shipped status with whoever builds it. A closed ticket isn't a shipped feature.
 * **Category decision:** the line, the part that never changes, the lines it replaced with their dates, each rejected alternative with its reason, and what does not change. Test it on a person, on an agent relaying it, and against every channel's length limit.
 * **Core construct** (if the product hands back a distinct unit of value): what it is, and, if you need both, an internal name and a customer-facing name and which goes where.
@@ -477,10 +496,11 @@ Keep these in mind:
 **Challenge.** Every claim checked against data, customer words, or the shipped table. Customer proof stays out until the customer approves it. Quotes illustrate the persona; they don't define it. Don't conclude what a customer lacks from one data source.
 
 **Done when.**
+
 * Every input conflict is resolved in writing.
 * Every other doc names the base layer and its version in its header.
 
-**After launch.** Run a dated staleness pass: compare the site and shipped sections with the live product and log each mismatch in Open items. It's a follow-up, not a gate for Phase 6.
+**After launch.** Run a dated staleness pass: compare the site and shipped sections with the live product and log each mismatch in Open items. It's a follow-up, and Phase 6 doesn't wait on it.
 
 ---
 
@@ -493,18 +513,21 @@ Keep these in mind:
 **First round, for a new site.** The chat agent drafts the full copy for every page from the base layer's site structure (T6, Section 8) and proposes where the copy file will live. Once the lead approves it, the coding agent builds the pages from it. Every change after that is a copy round.
 
 **How it runs** (two agents, one shared wiki):
+
 1. The chat agent writes a **copy round** (T7) and saves it to the wiki: what changes (the current line and the new one), the working rules, the changes to the copy file, and the checks that define done.
 2. The lead tells the coding agent: "Apply round [name] from the wiki." The agent changes the copy file first, makes the pages match, runs the checks, and reports each check with its result and anything that didn't apply cleanly.
 3. The lead reviews the result before it goes live and approves it.
 4. For an audit, the chat agent reads the result in the wiki, checks it against the brief, and writes the critique there for the coding agent to pick up.
 
 **Rules.**
+
 * Nothing claims what isn't shipped.
 * When a vocabulary or category decision changes, roll it out everywhere at once: site, docs, repo README, package listings, anything agents read.
 * Once copy is live, the copy file decides what every visible line says. The base layer quotes the lines positioning depends on, verbatim, with the file name and date. When a later decision changes a quoted line, leave the quote as shipped and flag it until the next round ships.
 * Decisions made in copy rounds (deviations, tone, scope, retired phrases) go back into the base layer as a new version that lists the rounds it came from.
 
 **Done when.**
+
 * Every page traces to the base layer.
 * Pages agents read (for example `llms.txt` and Markdown versions of pages) match the ones people read.
 
@@ -513,6 +536,7 @@ Keep these in mind:
 **Purpose.** Give the site one look before launch, and keep it consistent after.
 
 **How it runs.**
+
 1. The chat agent writes a design brief (T14) from the base layer: what the page or screen is, references to follow and avoid, what's fixed, what the design agent may propose, and which screens to produce.
 2. The lead iterates with the design agent on mockups, working from the live site so the design starts from what ships. For a new site, it works from the approved copy and the brief's constraints and proposes the first visual system.
 3. The design agent or the chat agent writes the decisions up as a task brief (T8a) for the coding agent, with the mockups attached for reference. Where the brief and the mockups disagree, the brief wins.
@@ -520,29 +544,33 @@ Keep these in mind:
 5. A decision that changes the look for good goes into the base layer's visual identity section.
 
 **Rules.**
+
 * Copy first. Text a design adds goes into the copy file before the build.
 * Anything the build needs from the mockups is written into the brief.
 
 **Done when.**
+
 * Pages in scope match the brief at desktop and phone width.
 * The base layer's visual identity section matches what shipped.
 
 ### 6c. Launch
 
-Copy and design are built and reviewed on a preview, not the live site. When both are approved, rerun the Phase 4 check against the product as built and record the lead's go or no-go. Then publish.
+Build and review copy and design on a preview before anything goes to the live site. When both are approved, rerun the Phase 4 check against the product as built and record the lead's go or no-go. Then publish.
 
 **Done when.**
+
 * Everything for launch is live and matches the base layer: site, self-service sign-up, legal pages, solution guides, and marketing materials.
 
 ---
 
 ## Phase 7: Strategy refresh
 
-**Purpose.** Rewrite the strategy against the base layer and real evidence, not the original thesis.
+**Purpose.** Rewrite the strategy against the base layer and the evidence gathered since the original thesis.
 
 **Draft.** A major version, rewritten against named inputs: the base layer, the pressure test, the competitive analysis, usage data, customer conversations, the MVP scope. List those inputs in the version history. Rewrite sections, don't patch them, and keep T1's section order so other docs can cite sections by number.
 
 **Patterns to use:**
+
 * **"How to read this document":** what changed underneath, in one paragraph.
 * **Holds / no longer holds:** each differentiator sorted, with the precise replacement claim.
 * **Now versus later:** a "not at launch" list, and long-term strategy in its own section.
@@ -557,6 +585,7 @@ Copy and design are built and reviewed on a preview, not the live site. When bot
 **Keep it current.** After the major version, bump a minor version whenever a companion doc changes something this doc carries (a new competitor row, a category line, a vocabulary change). Name that doc and version in the entry and update the header references in the same edit.
 
 **Done when.**
+
 * The doc matches the base layer.
 * Open questions carry an owner, or say who decides.
 * Section 11 matches the competitive analysis version named in the header.
@@ -569,6 +598,7 @@ Copy and design are built and reviewed on a preview, not the live site. When bot
 **Purpose.** A plan the team reads in two minutes and the agents can execute step by step.
 
 **Draft** (T9):
+
 * An exec summary the team can act on: the goal, the metric, the message, the engines in order, a to-do per person with a section number, and key dates.
 * Which doc wins: the base layer on the message. On what to do, this plan beats the strategy doc until the strategy is revised.
 * Engines, ranked, each named by the job it does. Propose them with the evidence for each (what's already producing, who you can reach, what it costs); the lead ranks them. Say which one produces paying customers. The lead approves review thresholds before execution.
@@ -580,6 +610,7 @@ Copy and design are built and reviewed on a preview, not the live site. When bot
 * **Stage the motion.** Start with a few design partners from warm contacts. Use their feedback to shape the product and the message before anything scales. Then get ready for the full outbound push: lists, sequences, meeting prep, and the instructions your CRM agents run on. Before outbound starts, agree with the lead what the design-partner stage has to show and when you'll review it.
 
 **Turn it into execution.**
+
 * Every timeline row becomes a ticket. Ticket titles start with the plan's step number ("3.08 Launch day"). Descriptions name the plan section, list numbered steps marked "Done [date]" as they finish, refer to other steps by number, and end with "Done when." The ticket ID goes in the timeline row.
 * Each ticket that needs an agent gets a **brief** (T8a) in the wiki, linked from the ticket.
 * Sections that become deliverables move to child docs (T9a) nested under the plan, with the version in the title. The parent section says "Superseded. The final text is in the child doc [title vN] ([ticket])."
@@ -589,6 +620,7 @@ Copy and design are built and reviewed on a preview, not the live site. When bot
 * Decisions waiting on the lead are marked "Needs go" in the timeline and listed under Open decisions with what they wait on. Delete them once resolved and say so in the version history.
 
 **Done when.**
+
 * Every step has a ticket and an owner.
 * Every agent task has a brief.
 * The plan links to the tracker for status.
@@ -613,13 +645,13 @@ Copy and design are built and reviewed on a preview, not the live site. When bot
 ## Handoffs between agents
 
 * **A handoff is a prompt.** Every brief, round, and handoff lives in the wiki, and the lead tells the next agent to read it by name. An agent the wiki can't reach gets the same doc as a file, or a reference brief (T8b).
-* **Briefs hold the job, not the context.** A task brief (T8a) links the source of truth, says which doc wins, and gives the scope, the procedure, flags, and the acceptance the output has to show. It doesn't restate the operating instructions or `AGENTS.md`; a connected agent reads them. The more an agent can read, the more the "which doc wins" line matters, because it will find stale and conflicting docs.
+* **Briefs hold the job.** A task brief (T8a) links the source of truth, says which doc wins, and gives the scope, the procedure, flags, and the acceptance the output has to show. It doesn't restate the operating instructions or `AGENTS.md`; a connected agent reads them. The more an agent can read, the more the "which doc wins" line matters, because it will find stale and conflicting docs.
 * **Reference briefs are for agents that work from their own instructions** (T8b), such as CRM agents. They carry every hard rule inline and list what changed at the top, since those agents can't see version history.
 * **Status lives on the ticket.** Versions live in doc titles. Where a piece of work stands lives on its ticket, which links the doc. Status shown anywhere else (a plan's timeline, an index, a doc header) is a snapshot as of its date; check the ticket before acting.
 * **Audience in the title** for agent-facing docs ("for the CRM agent," "coding-agent instructions").
 * **Long sessions end with a handoff doc** (T12), holding only what the repo, the tracker, and the wiki don't: what the session was doing, decisions and rules not yet written to their homes, what's waiting on whom, and the next steps. Start the next session with "Read [handoff] first." A session recorder lets a new session rebuild context if one is lost.
 * **Changes for another repo or agent go as tickets,** each linking a copy round (T7) or a task brief (T8a). If the agent doing the work can't read the tracker (a bot that only reads the repo, for example), also file an issue or PR in its repo and link it from the ticket. The ticket owns status.
-* **Design handoffs carry decisions, not pictures.** The mockups are reference only. The brief wins where the two disagree, and every value the build needs is written into it.
+* **Design handoffs carry decisions.** The mockups are reference only. The brief wins where the two disagree, and every value the build needs is written into it.
 * **The lead still approves** every merge, send, and publish.
 
 ## Keeping rules alive
@@ -627,7 +659,6 @@ Copy and design are built and reviewed on a preview, not the live site. When bot
 * A correction made twice becomes a rule (T13).
 * Every rule has one home: how you work with the agent goes in T0, product and copy decisions in the base layer, repo procedures in `AGENTS.md`. When a rule shows up in a second tool, copy it there and cite its home; the home doesn't change. Mechanical rules (like banned characters) get an automated check.
 * Agents without shared memory get the hard rules written into their own instructions. When a source doc changes version, update the agents that cite it.
-
 
 ---
 
@@ -842,7 +873,7 @@ I am not [things the agent should stop suggesting].
 > [The one paragraph that differs.]
 
 ## The beats
-*Memorize these, not the wording. The quoted line is what carries each beat.*
+*Memorize the beats. The quoted line under each one is what carries it.*
 1. **Who's speaking.** "[line]"
 2. **Who it's for, and their situation, stated plainly.** "[line]"
 3. **The pain, concrete and recurring.** A: "[line]" B: "[line]"
@@ -923,7 +954,7 @@ Alternate strictly: A, then B, then A. Don't blend them mid-conversation.
 ```
 # [Product]: path to [date] MVP
 *Working outline for [meeting]. Ends in decisions.*
-Goal: [what a confident MVP means] by [date], so we can [what it unlocks, e.g. start outbound to N design partners] through [sourcing channel].
+Goal: [what a confident MVP means] by [date], so we can [what it makes possible, e.g. start outbound to N design partners] through [sourcing channel].
 
 ## 1. What we're shipping, under what name
 [Naming and packaging changes for the window. If not final, run it as a time-boxed experiment and say how you'll judge it.]
@@ -932,7 +963,7 @@ Goal: [what a confident MVP means] by [date], so we can [what it unlocks, e.g. s
 - [Surfaces renamed or folded in.]
 - Out of scope for [date]: [products or features excluded entirely].
 - Open question: [the packaging call still undecided, and what it depends on].
-Why this matters for [date]: [why it's a prerequisite for outreach, not a nice-to-have].
+Why this matters for [date]: [why outreach can't start without it].
 
 ## 2. Product areas
 1. **[Area]:** [What it does. Built / not built / scoped to [tier or later phase].]
