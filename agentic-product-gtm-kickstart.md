@@ -4,7 +4,7 @@
 
 © 2026 Hernan Alvarez. Licensed under [CC BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/). Using it to run your own company's work is fine; see the [README](README.md).
 
-**Version 1.30 - 2026-11-03**
+**Version 1.31 - 2026-11-13**
 
 In July this was a side project, an hour or two a week helping a company think through its strategy.
 
@@ -91,6 +91,7 @@ flowchart TB
 | Software factory | Reviews, merges, and ships whatever lands in the repo. Takes direction in team chat | An internal fleet of coding agents (yours may be CI, a review bot, or a person) |
 | CRM with agents | Generates leads and scores them against the ICP, runs outreach, books meetings, preps the team before each one, and manages content | Clarify      |
 | Warm-intro graph | Builds outreach lists from real relationships | Connect the Dots |
+| Lead database | Finds contacts that match the ICP, fills in emails and titles, and loads them into outreach sequences | Apollo.io    |
 | Session recorder | A record of every agent session, including the software factory's. Use it to pick up where a session stopped, or to pull real numbers into content. Connected to the repo | HypAware     |
 | Product analytics | Website traffic, how people find you, and whether they start using the product. Fed by the website and the product | PostHog      |
 | Search | How the website shows up in search, and what people searched to find it | Google Search Console |
@@ -99,7 +100,7 @@ flowchart TB
 **Minimum to start:** a chat agent connected to a shared wiki. That gets you through Phases 0 to 5, which only produce documents. Add the rest when a phase needs it:
 
 * **Phase 6 (copy, design, launch):** coding agent, repo, design agent, team chat, product analytics, search.
-* **Phase 8 (growth plan and execution):** tracker, CRM with agents, warm-intro graph, paid search.
+* **Phase 8 (growth plan and execution):** tracker, CRM with agents, warm-intro graph, lead database, paid search.
 * **Optional, any time:** session recorder, software factory.
 
 **Connect every agent to the same wiki before Phase 5.** It's the setup choice that matters most. If you're downloading a file from one agent and uploading it to another, you're the bottleneck, and the copies drift apart.
@@ -127,6 +128,7 @@ flowchart LR
   subgraph GTM["Go to market"]
     Clarify[Clarify]
     CTD[(CTD)]
+    Apollo[Apollo.io]
   end
 
   subgraph Build["Build and ship"]
@@ -154,6 +156,7 @@ flowchart LR
   L <--> Slack
   L <--> Clarify
   L <--> CTD
+  L <--> Apollo
   L <--> HA
   L <--> PH
 
@@ -168,6 +171,8 @@ flowchart LR
   CC <--> CTD
   Claude <--> Clarify
   CC <--> Clarify
+  Claude <--> Apollo
+  CC <--> Apollo
   Slack <--> Clarify
   Clarify <--> Site
 
@@ -179,6 +184,8 @@ flowchart LR
   Clarify <--> Email
   Clarify <--> LinkedIn
   Clarify <--> Meetings
+  Apollo --> Clarify
+  Apollo --> Email
   Factory --> Site
   Factory --> SaaS
   Factory --> Client
